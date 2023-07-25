@@ -1,5 +1,5 @@
-from datetime import *
 import os
+from datetime import *
 from dotenv import load_dotenv
 
 load_dotenv()
