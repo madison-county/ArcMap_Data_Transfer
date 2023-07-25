@@ -12,14 +12,14 @@ PW = os.getenv('ARCGIS_PW')
 current_date = datetime.now().strftime('%Y-%m-%d_')
 label = current_date + 'Scripted-Backup/'
 
-FULL_PATH = os.path.join(BACKUP_PATH, label)
+full_path = os.path.join(BACKUP_PATH, label)
 
 def main():
-    print(f'{label, FULL_PATH}')
-    if os.path.isdir(FULL_PATH):
+    print(f'{label, full_path}')
+    if os.path.isdir(full_path):
         print('Directory Found')
     else:
-        os.mkdir(FULL_PATH)
+        os.mkdir(full_path)
 
 if __name__ == '__main__':
     main()
