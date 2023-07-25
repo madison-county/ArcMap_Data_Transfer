@@ -15,7 +15,6 @@ label = current_date + 'Scripted-Backup/'
 full_path = os.path.join(BACKUP_PATH, label)
 
 def main():
-    print(f'{label, full_path}')
     create_directory(full_path)
 
 def create_directory(path):
