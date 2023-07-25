@@ -21,5 +21,8 @@ def main():
     else:
         os.mkdir(full_path)
 
+def create_directory():
+    pass
+
 if __name__ == '__main__':
     main()
