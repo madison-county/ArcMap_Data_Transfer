@@ -1,16 +1,15 @@
 import os
 import shutil
 from datetime import *
+from arcgis.gis import *
 from dotenv import load_dotenv
 
 load_dotenv()
 
 BACKUP_PATH = r'//madco-gnas/GIS-SSD/01_Working-Data/04_Backup/02-Data/2023_Backup-Broad'
+PW = os.getenv('ARCGIS_PW')
 
 current_date = datetime.now().strftime('%Y-%m-%d_')
-PW = os.getenv('ARCGIS_PW')
-#BACKUP_PATH = os.getenv('BACKUP_PATH')
-
 label = current_date + 'Scripted-Backup/'
 
 FULL_PATH = os.path.join(BACKUP_PATH, label)
