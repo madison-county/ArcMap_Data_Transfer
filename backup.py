@@ -16,10 +16,7 @@ full_path = os.path.join(BACKUP_PATH, label)
 
 def main():
     print(f'{label, full_path}')
-    if os.path.isdir(full_path):
-        print('Directory Found')
-    else:
-        os.mkdir(full_path)
+    create_directory(full_path)
 
 def create_directory(path):
     if not os.path.isdir(path):
