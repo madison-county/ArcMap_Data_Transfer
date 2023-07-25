@@ -17,7 +17,10 @@ FULL_PATH = os.path.join(BACKUP_PATH, label)
 
 def main():
     print(f'{label, FULL_PATH}')
-    os.mkdir(FULL_PATH)
+    if os.path.isdir(FULL_PATH):
+        print('Directory Found')
+    else:
+        os.mkdir(FULL_PATH)
 
 if __name__ == '__main__':
     main()
