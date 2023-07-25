@@ -22,7 +22,10 @@ def main():
         os.mkdir(full_path)
 
 def create_directory(path):
-    pass
+    if not os.path.isdir(path):
+        os.mkdir(path)
+    else:
+        print('Directory Found')
 
 if __name__ == '__main__':
     main()
